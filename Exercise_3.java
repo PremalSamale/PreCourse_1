@@ -2,6 +2,14 @@ import java.io.*;
   
 // Java program to implement 
 // a Singly Linked List 
+// Time Complexity : o(n)
+// Space Complexity :o(n)
+// Did this code successfully run on Leetcode : N/A it is not a leetcode problem
+// Any problem you faced while coding this :No
+// Your code here along with comments explaining your approach
+// 1.create node with data and next node and constructor
+//2. insert new node: create new node with data. If list is empty then make new node as head. Else traverse until last node and insert new node to last node next.
+
 public class LinkedList { 
   
     Node head; // head of list 

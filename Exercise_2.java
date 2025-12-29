@@ -8,7 +8,7 @@
 //2 push : create new node and assign top of next node to new node
 //3 pop: keep top node in temporary node and assing top to next node.
 //4 peek: check for empty stack. if Not return top node data.
-public class StackAsLinkedList { 
+class StackAsLinkedList { 
   
     private StackNode top; 
 
@@ -25,8 +25,7 @@ public class StackAsLinkedList {
   
         StackNode(int data) 
         { 
-            //Constructor here 
-            data = data;
+            this.data = data;
             next = null;
 
         } 
@@ -37,7 +36,7 @@ public class StackAsLinkedList {
     { 
         //Write your code here for the condition if stack is empty. 
         if(top == null){
-            return true
+            return true;
         }else{
             return false;
         }
@@ -45,11 +44,13 @@ public class StackAsLinkedList {
     } 
   
     public void push(int data) 
-    { 
+    {  
         //Write code to push data to the stack. 
         StackNode newNode = new StackNode(data);
-        top.next = newNode;
+        newNode.next = top;
         top = newNode;
+        System.out.println(data +"Pushed into stack");       
+       
     } 
   
     public int pop() 
@@ -61,7 +62,7 @@ public class StackAsLinkedList {
         System.out.println("Stack underflow");
         return 0;
     }
-        Node temp = top;
+        StackNode temp = top;
         top = top.next;
         int val = temp.data;
         temp = null;

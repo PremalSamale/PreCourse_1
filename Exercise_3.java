@@ -10,7 +10,7 @@ import java.io.*;
 // 1.create node with data and next node and constructor
 //2. insert new node: create new node with data. If list is empty then make new node as head. Else traverse until last node and insert new node to last node next.
 
-public class LinkedList { 
+class LinkedList { 
   
     Node head; // head of list 
   
